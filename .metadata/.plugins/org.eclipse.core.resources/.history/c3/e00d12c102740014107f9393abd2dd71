@@ -1,0 +1,110 @@
+package fr.univnantes.alma.hadl.m2.configuration;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import fr.univnantes.alma.hadl.m2.component.Component;
+import fr.univnantes.alma.hadl.m2.component.Port;
+import fr.univnantes.alma.hadl.m2.component.PortProvided;
+import fr.univnantes.alma.hadl.m2.component.PortRequired;
+import fr.univnantes.alma.hadl.m2.connector.Connector;
+import fr.univnantes.alma.hadl.m2.connector.Role;
+import fr.univnantes.alma.hadl.m2.connector.RoleProvided;
+import fr.univnantes.alma.hadl.m2.connector.RoleRequired;
+
+public class Configuration {
+
+	private String name;
+	private HashMap<String, Component> components;
+	private HashMap<String, Connector> connectors;
+	private HashMap<String, PortConfiguration> portConfiguration;
+
+	private HashMap<RoleRequired, PortProvided> attachementsProvided;
+	private HashMap<RoleProvided, PortRequired> attachementsRequired;
+	private HashMap<RoleRequired, PortRequired> bindingsRequired;
+	private HashMap<RoleProvided, PortProvided> bindingsProvided;
+
+	public Configuration(String name, HashMap<String, Component> components,
+			HashMap<String, Connector> connectors,
+			HashMap<String, PortConfiguration> portConfiguration) {
+		super();
+		this.name = name;
+		this.components = components;
+		this.connectors = connectors;
+		this.portConfiguration = portConfiguration;
+	}
+
+	public void addAttachement() {
+
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public HashMap<String, Component> getComponents() {
+		return components;
+	}
+
+	public void setComponents(HashMap<String, Component> components) {
+		this.components = components;
+	}
+
+	public HashMap<String, Connector> getConnectors() {
+		return connectors;
+	}
+
+	public void setConnectors(HashMap<String, Connector> connectors) {
+		this.connectors = connectors;
+	}
+
+	public HashMap<String, PortConfiguration> getPortConfiguration() {
+		return portConfiguration;
+	}
+
+	public void setPortConfiguration(
+			HashMap<String, PortConfiguration> portConfiguration) {
+		this.portConfiguration = portConfiguration;
+	}
+
+	public void setAttachementsProvided(
+			HashMap<RoleRequired, PortProvided> attachementsProvided) {
+		this.attachementsProvided = attachementsProvided;
+	}
+
+	public void setAttachementsRequired(
+			HashMap<RoleProvided, PortRequired> attachementsRequired) {
+		this.attachementsRequired = attachementsRequired;
+	}
+
+	public void setBindingsProvided(
+			HashMap<RoleProvided, PortProvided> bindingsProvided) {
+		this.bindingsProvided = bindingsProvided;
+	}
+
+	public void setBindingsRequired(
+			HashMap<RoleRequired, PortRequired> bindingsRequired) {
+		this.bindingsRequired = bindingsRequired;
+	}
+
+	public HashMap<RoleRequired, PortProvided> getAttachementsProvided() {
+		return attachementsProvided;
+	}
+
+	public HashMap<RoleProvided, PortRequired> getAttachementsRequired() {
+		return attachementsRequired;
+	}
+
+	public HashMap<RoleProvided, PortProvided> getBindingsProvided() {
+		return bindingsProvided;
+	}
+
+	public HashMap<RoleRequired, PortRequired> getBindingsRequired() {
+		return bindingsRequired;
+	}
+
+}

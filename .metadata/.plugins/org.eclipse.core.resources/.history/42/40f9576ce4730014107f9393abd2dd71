@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  Configuration.java
+ * Author:  khocef
+ * Purpose: Defines the Class Configuration
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 1bee474f-0f8b-4275-9966-b1272e7060a1 */
+public class Configuration extends ArchitecturalElement {
+}

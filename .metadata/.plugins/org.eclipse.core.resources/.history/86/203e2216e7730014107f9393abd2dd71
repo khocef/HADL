@@ -1,0 +1,7 @@
+package fr.univnantes.alma.hadl.m2;
+
+import fr.univnantes.alma.hadl.m2.connector.Role;
+
+public class RoleRequired extends Role {
+
+}

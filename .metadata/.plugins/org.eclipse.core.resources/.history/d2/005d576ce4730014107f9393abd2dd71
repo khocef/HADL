@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  Component.java
+ * Author:  khocef
+ * Purpose: Defines the Class Component
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 25e282a7-fd14-4c22-a416-7fd199004b0c */
+public class Component extends ArchitecturalElement {
+}

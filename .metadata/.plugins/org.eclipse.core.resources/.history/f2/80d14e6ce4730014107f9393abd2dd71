@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  BindingRequired.java
+ * Author:  khocef
+ * Purpose: Defines the Class BindingRequired
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 38e24096-e291-4a1e-8095-9c4e8e92a8c0 */
+public class BindingRequired extends Binding {
+}

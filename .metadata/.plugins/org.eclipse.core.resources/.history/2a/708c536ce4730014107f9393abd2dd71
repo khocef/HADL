@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  ClearenceQueryFA.java
+ * Author:  khocef
+ * Purpose: Defines the Class ClearenceQueryFA
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 04e186bb-7569-4188-849a-f7272188f399 */
+public class ClearenceQueryFA extends FromAttachement {
+}

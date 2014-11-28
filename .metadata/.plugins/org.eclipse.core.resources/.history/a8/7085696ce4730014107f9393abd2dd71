@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  SQLQuerySender.java
+ * Author:  khocef
+ * Purpose: Defines the Class SQLQuerySender
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid bd4be380-f111-4e46-accf-33311b4e086a */
+public class SQLQuerySender extends RequiredRole {
+}

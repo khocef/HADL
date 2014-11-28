@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  Connector.java
+ * Author:  khocef
+ * Purpose: Defines the Class Connector
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 1fddcf5a-c581-4e9e-a8c7-9783f80b3402 */
+public class Connector extends ArchitecturalElement {
+}

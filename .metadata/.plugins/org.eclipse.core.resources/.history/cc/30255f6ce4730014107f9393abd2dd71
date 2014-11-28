@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  PrimitiveComponent.java
+ * Author:  khocef
+ * Purpose: Defines the Class PrimitiveComponent
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid a6e54371-2059-4af2-bb9f-e347ceb301db */
+public class PrimitiveComponent extends Component {
+}

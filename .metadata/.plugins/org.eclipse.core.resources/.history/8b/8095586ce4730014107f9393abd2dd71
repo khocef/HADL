@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  ConnectionManager.java
+ * Author:  khocef
+ * Purpose: Defines the Class ConnectionManager
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 2c786c1b-2a96-473e-8c97-49df4ad4941c */
+public class ConnectionManager extends PrimitiveComponent {
+}

@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  Server.java
+ * Author:  khocef
+ * Purpose: Defines the Class Server
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 7b8ceb72-b68b-47b9-9c4d-898eedb6945a */
+public class Server extends PrimitiveComponent {
+}

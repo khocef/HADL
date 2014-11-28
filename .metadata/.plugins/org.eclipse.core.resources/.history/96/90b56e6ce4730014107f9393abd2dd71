@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  SecurityQueryReceiver.java
+ * Author:  khocef
+ * Purpose: Defines the Class SecurityQueryReceiver
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 75156d5e-d2f7-4097-9629-9e19b5771029 */
+public class SecurityQueryReceiver {
+}

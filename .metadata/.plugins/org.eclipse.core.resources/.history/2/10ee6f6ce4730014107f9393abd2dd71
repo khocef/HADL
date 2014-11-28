@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  SecurityQueryTA.java
+ * Author:  khocef
+ * Purpose: Defines the Class SecurityQueryTA
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid dcfecd58-7878-4c9e-9787-2ffcf1553c58 */
+public class SecurityQueryTA extends ToAttachement {
+}

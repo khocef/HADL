@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  ReceiveRequest.java
+ * Author:  khocef
+ * Purpose: Defines the Class ReceiveRequest
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 89c436e8-7349-44da-b781-c499ec0d496f */
+public class ReceiveRequest extends ProvidedPort {
+}

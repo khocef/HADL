@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  SQLQueryFA.java
+ * Author:  khocef
+ * Purpose: Defines the Class SQLQueryFA
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid ecac658c-4ca2-411b-85dc-0649454a6549 */
+public class SQLQueryFA {
+}

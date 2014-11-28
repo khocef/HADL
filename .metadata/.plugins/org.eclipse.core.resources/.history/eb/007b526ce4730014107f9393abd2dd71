@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  ClearenceQuertTA.java
+ * Author:  khocef
+ * Purpose: Defines the Class ClearenceQuertTA
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 08a8cb5e-35c8-4bee-b87f-af6c1ae32113 */
+public class ClearenceQuertTA extends ToAttachement {
+}

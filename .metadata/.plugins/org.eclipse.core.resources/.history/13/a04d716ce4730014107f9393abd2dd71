@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  ServerToRPC.java
+ * Author:  khocef
+ * Purpose: Defines the Class ServerToRPC
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid a0e7d87b-4136-4046-b0fa-d91959c33ac0 */
+public class ServerToRPC extends ToAttachement {
+}

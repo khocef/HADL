@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  SQLQuery.java
+ * Author:  khocef
+ * Purpose: Defines the Class SQLQuery
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 32a1127a-644a-422c-894e-9bdaf63f57ee */
+public class SQLQuery extends PrimitiveConnector {
+}

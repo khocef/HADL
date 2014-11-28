@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  ProvidedService.java
+ * Author:  khocef
+ * Purpose: Defines the Class ProvidedService
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid c7c1a122-0770-4ff6-8dbf-029d633c2aad */
+public class ProvidedService extends Service {
+}

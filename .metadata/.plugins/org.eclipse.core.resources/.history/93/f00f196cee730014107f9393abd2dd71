@@ -1,0 +1,49 @@
+package fr.univnantes.alma.hadl.m2.configuration;
+
+import java.util.HashMap;
+
+import fr.univnantes.alma.hadl.m2.component.Component;
+import fr.univnantes.alma.hadl.m2.connector.Connector;
+
+public class Configuration {
+	
+	private String name;
+	private HashMap<String , Component> components;
+	private HashMap<String, Connector> connectors;
+	private HashMap<String, PortConfiguration> portConfiguration;
+	
+	
+	public Configuration(String name, HashMap<String, Component> components,
+			HashMap<String, Connector> connectors,
+			HashMap<String, PortConfiguration> portConfiguration) {
+		super();
+		this.name = name;
+		this.components = components;
+		this.connectors = connectors;
+		this.portConfiguration = portConfiguration;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public HashMap<String, Component> getComponents() {
+		return components;
+	}
+	
+	public void setComponents(HashMap<String, Component> components) {
+		this.components = components;
+	}
+	
+	public HashMap<String, Connector> getConnectors() {
+		return connectors;
+	}
+	
+	public void setConnectors(HashMap<String, Connector> connectors) {
+		this.connectors = connectors;
+	}
+}

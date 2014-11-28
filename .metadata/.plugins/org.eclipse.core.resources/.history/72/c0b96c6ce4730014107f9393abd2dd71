@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  SecurityManager.java
+ * Author:  khocef
+ * Purpose: Defines the Class SecurityManager
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid c06e1b22-9026-4f78-a7d0-7b829975bdcf */
+public class SecurityManager extends PrimitiveComponent {
+}

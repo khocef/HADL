@@ -1,0 +1,19 @@
+package fr.univnantes.alma.hadl.m2.connector;
+
+import java.util.HashMap;
+
+public class Glue {
+
+	private String name;
+
+	private HashMap<String, Role> rolesRequired;
+	private HashMap<String, Role> rolesProvided;
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+}

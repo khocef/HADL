@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  CfgProvidedPort.java
+ * Author:  khocef
+ * Purpose: Defines the Class CfgProvidedPort
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid b163aad3-2f52-4d14-8853-bcaa51ff9173 */
+public class CfgProvidedPort extends CfgPort {
+}

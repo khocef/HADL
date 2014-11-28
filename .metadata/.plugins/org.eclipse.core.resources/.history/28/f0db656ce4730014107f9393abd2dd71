@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  Requiredservice.java
+ * Author:  khocef
+ * Purpose: Defines the Class Requiredservice
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 50d2198e-e0fa-4486-b783-081c9f7460db */
+public class Requiredservice extends Service {
+}

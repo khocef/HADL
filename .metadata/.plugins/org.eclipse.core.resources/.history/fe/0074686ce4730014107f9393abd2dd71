@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  SQLQueryGlue.java
+ * Author:  khocef
+ * Purpose: Defines the Class SQLQueryGlue
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 9d467793-6ae2-4c80-98fc-ee98b46698c1 */
+public class SQLQueryGlue {
+}

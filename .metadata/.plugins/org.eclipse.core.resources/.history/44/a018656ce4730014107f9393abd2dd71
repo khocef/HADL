@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  RequiredRole.java
+ * Author:  khocef
+ * Purpose: Defines the Class RequiredRole
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 1ba503c5-2db4-414f-a2a0-a591f0cc3416 */
+public class RequiredRole extends Role {
+}

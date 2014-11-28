@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="fr.univnantes.alma.hadl.m2.Component"/>
+<fullyQualifiedTypeName name="fr.univnantes.alma.hadl.m2.Connector"/>
+<fullyQualifiedTypeName name="fr.univnantes.alma.hadl.m2.PrimitiveComponent"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="fr.univnantes.alma.hadl.m2.configuration.Configuration"/>
+<fullyQualifiedTypeName name="fr.univnantes.alma.hadl.m2.connector.Connector"/>
+<fullyQualifiedTypeName name="fr.univnantes.alma.hadl.m2.configuration.PortConfiguration"/>
+<fullyQualifiedTypeName name="fr.univnantes.alma.hadl.m2.component.Component"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="fr.univnantes.alma.hadl.m2.connector.Glue"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="fr.univnantes.alma.hadl.m2.connector.Role"/>
+<fullyQualifiedTypeName name="fr.univnantes.alma.hadl.m2.component.Port"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="fr.univnantes.alma.hadl.m2.connector.RoleRequired"/>
+<fullyQualifiedTypeName name="fr.univnantes.alma.hadl.m2.component.PortProvided"/>
+<fullyQualifiedTypeName name="fr.univnantes.alma.hadl.m2.connector.RoleProvided"/>
+<fullyQualifiedTypeName name="fr.univnantes.alma.hadl.m2.component.PortRequired"/>
+</qualifiedTypeNameHistroy>

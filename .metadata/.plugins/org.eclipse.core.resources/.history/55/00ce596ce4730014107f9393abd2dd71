@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  CredentialQuery.java
+ * Author:  khocef
+ * Purpose: Defines the Class CredentialQuery
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 09895ca5-85fd-4b22-8c40-72d8eef45282 */
+public class CredentialQuery extends ProvidedPort {
+}

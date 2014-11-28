@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  ClearenceQuerySender.java
+ * Author:  khocef
+ * Purpose: Defines the Class ClearenceQuerySender
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 1699c660-3ecf-4438-91a3-c1f24938e47b */
+public class ClearenceQuerySender {
+}

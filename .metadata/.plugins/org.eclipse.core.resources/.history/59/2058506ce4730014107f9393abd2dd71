@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  CfgPort.java
+ * Author:  khocef
+ * Purpose: Defines the Class CfgPort
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid b7f986d3-bdcd-41d0-b6c5-1bfc3313b0a5 */
+public class CfgPort {
+}

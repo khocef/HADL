@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  ProvidedPort.java
+ * Author:  khocef
+ * Purpose: Defines the Class ProvidedPort
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 0967a400-83d5-4439-a60f-5c1e42a4b7ac */
+public class ProvidedPort extends Port {
+}

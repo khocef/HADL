@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  ReceiveRequestBinding.java
+ * Author:  khocef
+ * Purpose: Defines the Class ReceiveRequestBinding
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 018b88c2-08a2-4db9-8a60-c7ae1b4b3f70 */
+public class ReceiveRequestBinding {
+}

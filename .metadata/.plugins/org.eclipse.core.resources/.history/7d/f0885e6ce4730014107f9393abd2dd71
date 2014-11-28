@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  Port.java
+ * Author:  khocef
+ * Purpose: Defines the Class Port
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid f95d6787-bf33-4e8c-b350-3133475ae0c0 */
+public class Port extends Interface {
+}

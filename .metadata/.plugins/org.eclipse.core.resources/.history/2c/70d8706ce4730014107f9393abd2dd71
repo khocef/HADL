@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  ServerDetail.java
+ * Author:  khocef
+ * Purpose: Defines the Class ServerDetail
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 47127c7b-9e90-44c6-ab40-becf390e46de */
+public class ServerDetail extends Component {
+}

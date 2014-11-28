@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  Called.java
+ * Author:  khocef
+ * Purpose: Defines the Class Called
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 80d8f189-50a4-4abc-8635-59d09f3154a6 */
+public class Called extends ProvidedRole {
+}

@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  ClearenceQueryGlue.java
+ * Author:  khocef
+ * Purpose: Defines the Class ClearenceQueryGlue
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid f74a8e01-50d1-47a3-b6da-64e6789a64df */
+public class ClearenceQueryGlue {
+}

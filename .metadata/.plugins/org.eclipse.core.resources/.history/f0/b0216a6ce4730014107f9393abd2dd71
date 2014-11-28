@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  SQLQueryTA.java
+ * Author:  khocef
+ * Purpose: Defines the Class SQLQueryTA
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 7fdeba5e-dbb7-4274-ba7a-78184e78f612 */
+public class SQLQueryTA extends ToAttachement {
+}

@@ -1,0 +1,11 @@
+/***********************************************************************
+ * Module:  RPCGlue.java
+ * Author:  khocef
+ * Purpose: Defines the Class RPCGlue
+ ***********************************************************************/
+
+import java.util.*;
+
+/** @pdOid 291f1f7c-54e5-446c-a213-9fd8f1145683 */
+public class RPCGlue {
+}
