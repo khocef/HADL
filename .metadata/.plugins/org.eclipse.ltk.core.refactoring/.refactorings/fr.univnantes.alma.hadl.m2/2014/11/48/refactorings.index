@@ -6,3 +6,20 @@
 1416839707475	Move compilation units
 1416839713011	Move compilation unit
 1416841551134	Delete element
+1417218315653	Move compilation unit
+1417219390352	Delete elements
+1417219395382	Delete element
+1417219424572	Delete elements
+1417219437480	Move compilation unit
+1417219443443	Move compilation unit
+1417219526289	Move compilation unit
+1417219566488	Move compilation units
+1417219570785	Move compilation units
+1417219589646	Move compilation units
+1417219597268	Delete elements
+1417220087038	Rename type 'Element'
+1417220116511	Encapsulate field 'elements'
+1417220167127	Rename type 'HADLObject'
+1417220440652	Encapsulate field 'configuration'
+1417220597749	Encapsulate field 'type'
+1417222247495	Encapsulate field 'portNumber'

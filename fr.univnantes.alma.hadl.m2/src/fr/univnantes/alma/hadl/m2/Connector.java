@@ -1,4 +1,4 @@
-package fr.univnantes.alma.hadl.m2.connector;
+package fr.univnantes.alma.hadl.m2;
 
 import java.util.HashMap;
 
