@@ -23,3 +23,5 @@
 1417220440652	Encapsulate field 'configuration'
 1417220597749	Encapsulate field 'type'
 1417222247495	Encapsulate field 'portNumber'
+1417226134103	Rename type 'DiffrentTypeBindingException'
+1417226334044	Delete element
