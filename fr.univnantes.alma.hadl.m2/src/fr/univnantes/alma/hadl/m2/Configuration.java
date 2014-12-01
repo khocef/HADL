@@ -20,7 +20,7 @@ public abstract class Configuration extends Component {
 	 */
 	public Configuration(String name, Set<ArchitecturalElement> elements) {
 		super(name);
-		this.setElements(elements);
+		this.elements = elements;
 	}
 
 	/**
@@ -28,14 +28,6 @@ public abstract class Configuration extends Component {
 	 */
 	public Set<ArchitecturalElement> getElements() {
 		return elements;
-	}
-
-	/**
-	 * @param elements
-	 *            the Configuration elements to set
-	 */
-	private void setElements(Set<ArchitecturalElement> elements) {
-		this.elements = elements;
 	}
 
 	/**
@@ -129,12 +121,29 @@ public abstract class Configuration extends Component {
 				if (e instanceof Configuration
 						&& ((Configuration) e).containsService(service)) {
 					Object result = null;
+
+					for (Link l : this.getLinks()) {
+						if (l instanceof Binding
+								&& ((Binding) l).getName().equalsIgnoreCase(
+										name))
+							;
+					}
+					/*
+					 * TODO : Searsh through links {binding} -> {interfaces} to
+					 * find port
+					 */
 					return result;
 				} else if (e instanceof Component) {
 
 				}
 			}
 		}
+		if (service != null) {
+			/* Call the service */
+			service.call(params);
+		}
+		System.err.println("[Configuration " + this.getName()
+				+ "] Error: Can't find the service {" + name + "}");
 		return null;
 	}
 }
