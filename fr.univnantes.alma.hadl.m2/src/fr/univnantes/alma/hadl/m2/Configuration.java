@@ -3,6 +3,8 @@ package fr.univnantes.alma.hadl.m2;
 import java.util.Map;
 import java.util.Set;
 
+import fr.univnantes.alma.hadl.m2.exception.ServiceException;
+
 /**
  * 
  * @author khocef
@@ -11,7 +13,7 @@ public abstract class Configuration extends Component {
 
 	private Set<ArchitecturalElement> elements;
 
-	// TODO : Should add properties and constraints ??
+	// TODO : Should add properties and constraints ?
 
 	/**
 	 * 
@@ -87,12 +89,11 @@ public abstract class Configuration extends Component {
 	 * @param service
 	 * @return
 	 */
-	public boolean containsService(Service service) {
-		if (super.containsService(service))
+	private boolean containsService(Service service) {
+		if (super.hasService(service))
 			return true;
 		for (ArchitecturalElement e : this.elements) {
-			if (e instanceof Component
-					&& ((Component) e).containsService(service))
+			if (e instanceof Component && ((Component) e).hasService(service))
 				return true;
 			else if (e instanceof Configuration
 					&& ((Configuration) e).containsService(service))
@@ -108,42 +109,135 @@ public abstract class Configuration extends Component {
 	 * @param port
 	 * @return
 	 */
-	public Object callServiceFromPort(String name, Map<String, Object> params,
-			Port port) {
+	@Override
+	public Object callService(String name, Map<String, Object> params) {
 		// TODO Auto-generated method stub
 		Service service = null;
 		for (Interface i : this.getInterfaces())
 			if (i instanceof Service
 					&& ((Service) i).getName().equalsIgnoreCase(name))
 				service = (Service) i;
+
 		if (service == null) {
 			for (ArchitecturalElement e : this.elements) {
-				if (e instanceof Configuration
-						&& ((Configuration) e).containsService(service)) {
-					Object result = null;
-
-					for (Link l : this.getLinks()) {
-						if (l instanceof Binding
-								&& ((Binding) l).getName().equalsIgnoreCase(
-										name))
-							;
+				if (e instanceof Configuration) {
+					if (((Configuration) e).hasService(service)) {
+						Object result = this.callServiceToConfiguration(name,
+								params, (Configuration) e);
+						return result;
 					}
-					/*
-					 * TODO : Searsh through links {binding} -> {interfaces} to
-					 * find port
-					 */
-					return result;
-				} else if (e instanceof Component) {
+				}
 
+				/*
+				 * TODO : Searsh through links {binding} -> {interfaces} to find
+				 * port
+				 */
+				else if (e instanceof Component) {
+					for (Interface i : this.getInterfaces())
+						if (i.getName().equalsIgnoreCase(name))
+							service = (Service) i;
 				}
 			}
 		}
 		if (service != null) {
+			System.out.println("[Configuration " + this.getName()
+					+ " call Service " + service.getName() + "]");
 			/* Call the service */
-			service.call(params);
+			Object result;
+			try {
+				result = service.call(params);
+				if (result == null)
+					System.out.println("[Configuration " + this.getName()
+							+ " received response from Service "
+							+ service.getName());
+				else
+					System.out.println("[Configuration " + this.getName()
+							+ " no response recieved from Service "
+							+ service.getName());
+				return result;
+			} catch (ServiceException e) {
+				e.printStackTrace();
+				return null;
+			}
+
 		}
 		System.err.println("[Configuration " + this.getName()
 				+ "] Error: Can't find the service {" + name + "}");
+		return null;
+	}
+
+	/**
+	 * 
+	 * @param name
+	 * @param params
+	 * @param configuration
+	 * @return
+	 */
+	private Object callServiceToConfiguration(String name,
+			Map<String, Object> params, Configuration configuration) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object callServiceFromPort(String name, Map<String, Object> params,
+			Port port) {
+		Role role = getAttachedProvidedPort(port);
+		if (role != null) {
+			// TODO : Do Something ??????
+		}
+		return null;
+	}
+
+	/**
+	 * get role attached to port
+	 * 
+	 * @param port
+	 * @return
+	 */
+	private Role getAttachedProvidedPort(Port port) {
+		for (Link l : this.getLinks()) {
+			if (l instanceof Attachement) {
+				if (l.getRequired().equals(port)) {
+					if (l.getProvided() instanceof Role) {
+						// TODO : add log
+						return (Role) l.getProvided();
+					}
+				}
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * get role attached from port
+	 * 
+	 * @param port
+	 * @return
+	 */
+	private Role getAttachedRequiredPort(Port port) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/**
+	 * get port attached to role
+	 * 
+	 * @param role
+	 * @return
+	 */
+	private Port getAttachedProvidedRole(Role role) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/**
+	 * get port attached from rome
+	 * 
+	 * @param role
+	 * @return
+	 */
+	private Port getAttachedRequiredRole(Role role) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 }

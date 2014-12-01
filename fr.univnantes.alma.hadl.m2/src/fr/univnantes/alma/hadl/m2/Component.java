@@ -127,7 +127,7 @@ public abstract class Component extends ArchitecturalElement {
 		return this.links.remove(link);
 	}
 
-	public boolean containsService(Service service) {
+	public boolean hasService(Service service) {
 		for (Interface i : this.interfaces)
 			if (i instanceof Service
 					&& ((Service) i).getName().equalsIgnoreCase(

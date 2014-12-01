@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+import fr.univnantes.alma.hadl.m2.exception.ServiceException;
+
 public abstract class Service extends Interface {
 
 	private Map<String, Class<?>> params;
@@ -32,5 +34,5 @@ public abstract class Service extends Interface {
 				+ Arrays.toString(params.entrySet().toArray()) + "]";
 	}
 
-	public abstract Object call(Map<String, Object> params);
+	public abstract Object call(Map<String, Object> params) throws ServiceException;
 }

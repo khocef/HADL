@@ -1,5 +1,0 @@
-package fr.univnantes.alma.hadl.m2.connector;
-
-public class PrimitiveConnector extends Connector {
-
-}
