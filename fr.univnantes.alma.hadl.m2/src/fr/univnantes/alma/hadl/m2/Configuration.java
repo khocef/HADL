@@ -1,5 +1,6 @@
 package fr.univnantes.alma.hadl.m2;
 
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -20,9 +21,9 @@ public abstract class Configuration extends Component {
 	 * @param name
 	 * @param elements
 	 */
-	public Configuration(String name, Set<ArchitecturalElement> elements) {
-		super(name);
-		this.elements = elements;
+	public Configuration(String name, Interface _interface) {
+		super(name, _interface);
+		this.elements = new HashSet<ArchitecturalElement>();
 	}
 
 	/**
@@ -89,7 +90,7 @@ public abstract class Configuration extends Component {
 	 * @param service
 	 * @return
 	 */
-	private boolean containsService(Service service) {
+	public boolean containsService(Service service) {
 		if (super.hasService(service))
 			return true;
 		for (ArchitecturalElement e : this.elements) {
@@ -173,9 +174,8 @@ public abstract class Configuration extends Component {
 	 * @param configuration
 	 * @return
 	 */
-	private Object callServiceToConfiguration(String name,
+	public Object callServiceToConfiguration(String name,
 			Map<String, Object> params, Configuration configuration) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -189,17 +189,21 @@ public abstract class Configuration extends Component {
 	}
 
 	/**
-	 * get role attached to port
+	 * get role attached to the provided port
 	 * 
 	 * @param port
 	 * @return
 	 */
-	private Role getAttachedProvidedPort(Port port) {
+	public Role getAttachedProvidedPort(Port port) {
 		for (Link l : this.getLinks()) {
 			if (l instanceof Attachement) {
 				if (l.getRequired().equals(port)) {
 					if (l.getProvided() instanceof Role) {
-						// TODO : add log
+						System.out.println("[Configuration " + this.getName()
+								+ "] Using Attachement " + l.getName() + " ");
+						System.out.println("\tRole{"
+								+ l.getRequired().getName() + "  -> Port "
+								+ l.getProvided().getName() + " ");
 						return (Role) l.getProvided();
 					}
 				}
@@ -209,35 +213,68 @@ public abstract class Configuration extends Component {
 	}
 
 	/**
-	 * get role attached from port
+	 * get role attached from the required port
 	 * 
 	 * @param port
 	 * @return
 	 */
-	private Role getAttachedRequiredPort(Port port) {
-		// TODO Auto-generated method stub
+	public Role getAttachedRequiredPort(Port port) {
+		for (Link l : this.getLinks()) {
+			if (l instanceof Attachement) {
+				if (l.getProvided().equals(port)) {
+					if (l.getRequired() instanceof Role) {
+						System.out.println("[Configuration " + this.getName()
+								+ "] Using Attachement " + l.getName() + " ");
+						System.out.println("\tRole{"
+								+ l.getRequired().getName() + "  -> Port "
+								+ l.getProvided().getName() + " ");
+						return (Role) l.getRequired();
+					}
+				}
+			}
+		}
 		return null;
 	}
 
 	/**
-	 * get port attached to role
+	 * get port attached to the provided role
 	 * 
 	 * @param role
 	 * @return
 	 */
-	private Port getAttachedProvidedRole(Role role) {
-		// TODO Auto-generated method stub
+	public Port getAttachedProvidedRole(Role role) {
+		for (Link l : this.getLinks()) {
+			if (l instanceof Attachement) {
+				if (((Attachement) l).getProvided().equals(role)) {
+					System.out.println("[Configuration " + this.getName()
+							+ " ] Using Attachement " + l.getName() + " ");
+					System.out.println("\tPort " + l.getRequired().getName()
+							+ "  -> Role " + l.getProvided().getName() + " ");
+					return (Port) l.getRequired();
+				}
+			}
+		}
 		return null;
 	}
 
 	/**
-	 * get port attached from rome
+	 * get port attached from the required role
 	 * 
 	 * @param role
 	 * @return
 	 */
-	private Port getAttachedRequiredRole(Role role) {
-		// TODO Auto-generated method stub
+	public Port getAttachedRequiredRole(Role role) {
+		for (Link l : this.getLinks()) {
+			if (l instanceof Attachement) {
+				if (((Attachement) l).getRequired().equals(role)) {
+					System.out.println("[Configuration " + this.getName()
+							+ " ] Using Attachement " + l.getName() + " ");
+					System.out.println("\tRole " + l.getRequired().getName()
+							+ "  -> Port " + l.getProvided().getName() + " ");
+					return (Port) l.getProvided();
+				}
+			}
+		}
 		return null;
 	}
 }

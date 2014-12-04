@@ -9,10 +9,11 @@ public abstract class Component extends ArchitecturalElement {
 	private Set<Interface> interfaces;
 	private Set<Link> links;
 
-	public Component(String name) {
+	public Component(String name, Interface _interface) {
 		super(name);
 		this.interfaces = new HashSet<Interface>();
 		this.links = new HashSet<Link>();
+		this.interfaces.add(_interface);
 	}
 
 	/**
